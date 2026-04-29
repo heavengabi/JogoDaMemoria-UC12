@@ -74,10 +74,10 @@ header {
   border: 6px solid #6bdcff;
   position: relative; 
   transform-style: preserve-3d;
-  transition: transform 0.6s; /* animação do flip */
+  transition: transform 0.6s;
 }
 
-/* O card quando estiver virado */
+/* Card virado */
 .virado {
   transform: rotateY(180deg);
 }
@@ -93,20 +93,18 @@ header {
   justify-content: center;
 }
 
+/* FRENTE do card (o que o usuário vê inicialmente) */
 .front {
-  transform: rotateY(180deg);
+  transform: rotateY(0deg);
   background-image: url(/assets/images/question.png);
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  width: 50px;
-  
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
+/* VERSO do card (a imagem que aparece quando vira) */
 .back {
-  background-color: #6bdcff;
-  transform: rotateY(0deg);
-  
+  transform: rotateY(180deg);
 }
 
 .back img {
