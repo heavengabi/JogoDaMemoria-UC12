@@ -14,38 +14,54 @@ body {
   align-items: center;
   padding: 20px;
   background-color: #fafafa;
+  background-image: url(https://i.pinimg.com/736x/0f/20/ff/0f20fff108219fc11e56ac99430a5247.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.container-jogo {
-  background-color: red;
-  width: 150vh;
-  height: 80vh;
-  margin-top: 30px;
-  justify-content: center;
-}
+
 header {
   font-size: 20px;
   justify-content: center;
-  color: #2c3e50;
+  color: rgb(28, 153, 255);
   align-items: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+  padding: 20px;
 }
 
 .pontuacao-jogada {
   font-size: 15px;
   text-transform: uppercase;
   margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  color: rgb(28, 153, 255);
 }
+
+.container-jogo {
+  width: 150vh;
+  height: 80vh;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .cards {
   width: 80%;
   max-width: 900px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 colunas */
+  grid-template-columns: repeat(
+    5,
+    1fr
+  ); /*esse grid template é pra dizer qye vao ter colunas com 5 cartas*/
   gap: 15px;
-  background-color: red;
   padding: 20px;
   align-items: center;
   justify-content: center;
-  margin:auto 0;
-
+  margin: 0 auto;
 }
 
 .card {
@@ -53,15 +69,47 @@ header {
   aspect-ratio: 3 / 4;
   background-color: white;
   border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  border: 6px solid #6bdcff;
+  position: relative; 
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+/* Card virado */
+.virado {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
 }
 
-.card img {
-  width: 80%;
-  height: 80%;
-  object-fit: contain;
+/* FRENTE do card (o que o usuário vê inicialmente) */
+.front {
+  transform: rotateY(0deg);
+  background-image: url(/assets/images/question.png);
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
+/* VERSO do card (a imagem que aparece quando vira) */
+.back {
+  transform: rotateY(180deg);
+}
+
+.back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
 }
