@@ -34,8 +34,8 @@ header {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  width: 200px;
-  height: 100px;
+  width: 140px;
+  height: 60px;
   border: 4px solid #6bdcff;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0);
@@ -48,17 +48,10 @@ header {
   color: rgb(28, 153, 255);
   cursor: pointer;
   margin-top: 10px;
+
 }
-.embaralhar {
-  font-size: 30px;
-  text-transform: uppercase;
-  background-color: transparent;
-  border: none;
-  color: rgb(28, 153, 255);
-  cursor: pointer;
-}
-.resetar:hover,
-.embaralhar:hover {
+
+.resetar:hover {
   color: white;
 }
 .pontuacao-jogada {
