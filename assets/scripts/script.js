@@ -46,12 +46,7 @@ cards.forEach((card) => {
 });
 
 //========================================================================================//
-
-// função de embaralhar
-function resetar(array) {
-  return array.sort(() => Math.random() - 0.5);
-}
-
+//funcao que eu reutilizo em dois lugares
 function embaralharCards() {
   cards.forEach((card) => {
     const ordemAleatoria = Math.floor(Math.random() * 10); // numero aleatorio entre 0 e 9
