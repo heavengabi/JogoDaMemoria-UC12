@@ -1,5 +1,5 @@
 # 🧠 Jogo da Memória — Blue Period
-
+#### https://heavengabi.github.io/JogoDaMemoria-UC12/
 Projeto de um jogo da memória desenvolvido com foco em prática de JavaScript, manipulação do DOM e estilização com CSS. Inspirado no tema *Blue Period*, com uma paleta em tons de azul.
 
 ## 📌 Sobre o projeto
