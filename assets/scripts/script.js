@@ -22,13 +22,11 @@ cards.forEach((card) => {
       tentativas++;
       document.querySelector(".jogadas").textContent = "jogadas: " + tentativas;
 
-      const img1 = cartasViradas[0].querySelector(".back img").src; // pega a imagem do 1º card
-      const img2 = cartasViradas[1].querySelector(".back img").src; // pega a imagem do 2º card
+      const img1 = cartasViradas[0].querySelector(".back img").src; // pega a imagem do primeiro card
+      const img2 = cartasViradas[1].querySelector(".back img").src; // pega a imagem do segundo card
       if (img1 === img2) {
-        // acertou! as cartas ficam abertas e ganha ponto
+        // se acertou as cartas ficam abertas e ganha ponto
         pontos++;
-        document.querySelector(".jogadas").textContent =
-          "jogadas: " + tentativas;
         document.querySelector(".pontos").textContent = "pontuação: " + pontos;
         cartasViradas[0].classList.add("correct"); // borda verde no 1 card
         cartasViradas[1].classList.add("correct"); // borda verde no 2 card
@@ -51,11 +49,7 @@ cards.forEach((card) => {
 
 // função de embaralhar
 function resetar(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const e = Math.floor(Math.random() * (i + 1));
-    [array[i], array[e]] = [array[e], array[i]]; // troca os elementos de lugar
-  }
-  return array;
+  return array.sort(() => Math.random() - 0.5);
 }
 
 function embaralharCards() {
