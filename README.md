@@ -50,7 +50,7 @@ O visual do jogo foi inspirado no anime/mangá Blue Period, utilizando:
 ## 👥 Autores
 
 - Gabriela Silva da Rosa
-- Kalléo 
+- Kalléo Kaefer Roque Antunes
 
 ## 💡 Objetivo
 
