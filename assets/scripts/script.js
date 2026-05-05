@@ -49,8 +49,8 @@ cards.forEach((card) => {
 //funcao que eu reutilizo em dois lugares
 function embaralharCards() {
   cards.forEach((card) => {
-    const ordemAleatoria = Math.floor(Math.random() * 10); // numero aleatorio entre 0 e 9
-    card.style.order = ordemAleatoria; // muda a ordem visual do card
+    const ordemAleatoria = Math.floor(Math.random() * cards.length); // gera um numero aleatorio baseado na quantidade de cards e usa esse valor no order
+    card.style.order = ordemAleatoria; //para definir a posição visual do card no layout grid, embaralhando a ordem
     card.classList.remove("virado"); // desvira todos os cards
     card.classList.remove("correct"); // remove a borda verde
   });
@@ -65,9 +65,8 @@ function embaralharCards() {
 
 //========================================================================================//
 
-//chama a mesma funcao em lugares diferentes 
+//chama a mesma funcao em lugares diferentes
 // uma quando clica no botao de começar ou quando reinicia a pagina
 //  e outra quando clica no botao de resetar
-window.addEventListener("load", embaralharCards)
-btnReset.addEventListener('click', embaralharCards)
-
+window.addEventListener("load", embaralharCards);
+btnReset.addEventListener("click", embaralharCards);
